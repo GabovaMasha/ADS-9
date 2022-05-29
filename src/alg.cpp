@@ -1,9 +1,9 @@
 // Copyright 2021 NNTU-CS
-#include  <string>
 #include  <iostream>
 #include  <fstream>
 #include  <locale>
 #include  <cstdlib>
+#include  <string>
 #include  "bst.h"
 
 
@@ -15,7 +15,7 @@ std::cout << "File error!" << std::endl;
 return  wordTree;
 }
 std::string word = "";
-while(!file.eof()) {
+while (!file.eof()) {
 char simv = file.get();
 if (simv >= 65 && simv <= 90) {
 word += tolower(simv);
