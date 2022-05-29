@@ -10,7 +10,7 @@
 BST<std::string> makeTree(const char* filename) {
 BST<std::string> wordTree;
 std::ifstream file(filename);
-std::string word;
+string word = "";
 if (!file) {
 std::cout << "File error!" << std::endl;
 return  wordTree;
