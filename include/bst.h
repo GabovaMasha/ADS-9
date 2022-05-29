@@ -18,9 +18,9 @@ root->value = val;
 root->count = 1;
 root->left = root->right = nullptr;
 } else if (root->value > val) {
-root->left = addNode (root->left, val);
+root->left = addNode(root->left, val);
 } else if (root->value < val) {
-root->right = addNode (root->right, val);
+root->right = addNode(root->right, val);
 } else {
 root->count++;
 }
@@ -52,16 +52,16 @@ return searchNode(root->right, val);
 }
 }
  public :
-BST () {
+BST() {
 root = nullptr;
 }
-void add (T value) {
+void add(T value) {
 root = addNode(root, value);
 }
-int depth () {
+int depth() {
 return depthTree(root)-1;
 }
-int search (T value) {
+int search(T value) {
 return searchNode(root, value);
 }
 };
