@@ -10,11 +10,12 @@
 BST<std::string> makeTree(const char* filename) {
 BST<std::string> wordTree;
 std::ifstream file(filename);
+std::string word;
 if (!file) {
 std::cout << "File error!" << std::endl;
 return  wordTree;
 }
-std::string word = "";
+
 while (!file.eof()) {
 char simv = file.get();
 if (simv >= 65 && simv <= 90) {
