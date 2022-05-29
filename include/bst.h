@@ -2,8 +2,7 @@
 #ifndef INCLUDE_BST_H_
 #define INCLUDE_BST_H_
 template < typename T >
-class BST
-{
+class BST {
  private :
 struct Node {
 T value;
@@ -18,26 +17,23 @@ root = new Node;
 root->value = val;
 root->count = 1;
 root->left = root->right = nullptr;
-}
-else if(root->value > val) {
+} else if (root->value > val) {
 root->left = addNode (root->left, val);
-}
-else if(root->value < val) {
+} else if (root->value < val) {
 root->right = addNode (root->right, val);
-}
-else{
-root->count ++;
+} else {
+root->count++;
 }
 return root;
 }
 
-int depthTree(Node* root){
+int depthTree(Node* root) {
   if (root ==nullptr) {
   return 0;
   } else {
 int L = depthTree(root->left);
 int R = depthTree(root->right);
-if(L > R) {
+if (L > R) {
 return L + 1;
 } else {
 return R + 1;
@@ -47,9 +43,9 @@ return R + 1;
 int searchNode(Node* root, T val) {
 if (root ==nullptr) {
   return 0;
-} else if(root->value == val) {
+} else if (root->value == val) {
 return root->count;
-} else if(root->value > val) {
+} else if (root->value > val) {
 return searchNode(root->left, val);
 } else {
 return searchNode(root->right, val);
