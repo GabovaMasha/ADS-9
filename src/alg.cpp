@@ -8,24 +8,24 @@
 
 
 BST<std::string> makeTree(const char* filename) {
-BST<std::string> wordTree;
+BST<std::string> wordtr;
 std::ifstream file(filename);
-std::string word = "";
+std::string wrd = "";
 if (!file) {
 std::cout << "File error!" << std::endl;
-return  wordTree;
+return  wordtr;
 }
 while (!file.eof()) {
 char simv = file.get();
 if (simv >= 65 && simv <= 90) {
-word += tolower(simv);
+wrd += tolower(simv);
 } else if (simv >= 97 && simv <= 122) {
-word += simv;
+wrd += simv;
 } else {
-wordTree.add(word);
-word = "";
+wordtr.add(word);
+wrd = "";
 }
 }
 file.close();
-return wordTree;
+return wordtr;
 }
